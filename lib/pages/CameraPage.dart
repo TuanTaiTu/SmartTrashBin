@@ -19,10 +19,22 @@ class _CameraPageState extends State<CameraPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
+      body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Container(),
+            Container(
+              margin: EdgeInsets.only(top: 20),
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Camera",
+                      style:
+                          TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
+                    )
+                  ]),
+            ),
           ],
         ),
       ),

@@ -18,11 +18,13 @@ class SmartTrashBinPage extends StatefulWidget {
 
 class _SmartTrashBinPageState extends State<SmartTrashBinPage> {
   final Organic = <String, double>{
-    "Organic": 72,
+    "Organic": 72.69,
   };
 
   final Inorganic = <String, double>{
-    "Inorganic": 69,
+    "Plastic": 43.0,
+    "Glass": 37.0,
+    "Paper": 20.0
   };
 
   final colorList = <Color>[
@@ -101,8 +103,7 @@ class _SmartTrashBinPageState extends State<SmartTrashBinPage> {
                         showChartValuesInPercentage: true,
                         showChartValuesOutside: false,
                       ),
-                      legendOptions: LegendOptions(showLegends: false),
-                      totalValue: 100,
+                      legendOptions: LegendOptions(showLegends: true),
                     ),
                   ),
                 ],

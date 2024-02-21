@@ -25,9 +25,10 @@ class _TempPageState extends State<TempPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            // Humidity
             Container(
               height: 300,
-              width: 400,
+              width: 370,
               margin: EdgeInsets.only(top: 50),
               child: Column(
                 children: [
@@ -39,7 +40,10 @@ class _TempPageState extends State<TempPage> {
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  Image(image: AssetImage('images/temperature.png'))
+                  SizedBox(
+                      height: 200,
+                      width: 200,
+                      child: Image(image: AssetImage('images/humidity.png')))
                 ],
               ),
               decoration: BoxDecoration(
@@ -48,16 +52,25 @@ class _TempPageState extends State<TempPage> {
             SizedBox(
               height: 30,
             ),
+            // Temperature
             Container(
               height: 300,
               width: 400,
-              child: Text(
-                "Temperature: 27°C",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.w700,
-                ),
+              child: Column(
+                children: [
+                  Text(
+                    "Temperature: 27°C",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  SizedBox(
+                      height: 200,
+                      width: 200,
+                      child: Image(image: AssetImage('images/temperature.png')))
+                ],
               ),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40.0),
